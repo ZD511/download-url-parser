@@ -13,15 +13,15 @@ def get_ed2l(url):
 	#print(enconding)
 
 	selector = etree.HTML(r.content.decode(enconding[0], errors='ignore'))
-	ed2k_all = []
-	ed2k_all = selector.xpath(
+	download_url_all = []
+	download_url_all = selector.xpath(
 		'//*[contains(@href, "ed2k://") or contains(@href,"ftp://") or contains(@href, "thunder://")]/@href')  # 6vhao or dytt8 extract href attibute which has 'ed2k://' field
-	ed2k_all += selector.xpath('//*[contains(@src, "btbo://") or contains(@src,"magnet:?")]/@src')  # piaohua
+	download_url_all += selector.xpath('//*[contains(@src, "btbo://") or contains(@src,"magnet:?")]/@src')  # piaohua
 
 	file_name = time.strftime("%Y-%m-%d-%H%M%S", time.localtime())
 	with open('%s.txt' % file_name, 'w', encoding='utf-8') as ff:
-		ff.write('episodes at this time: %s\n' % len(ed2k_all))
-		ff.write('\n'.join(ed2k_all))
+		ff.write('episodes at this time: %s\n' % len(download_url_all))
+		ff.write('\n'.join(download_url_all))
 	print('done')
 
 
