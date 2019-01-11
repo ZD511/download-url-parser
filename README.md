@@ -1,46 +1,37 @@
 # download-url-parser
 
-> $$1LINER
-
-get all download urls in a page
+> When I use third party software to download episodes on film websites, I have to click each download url and it's really bothering me. 
+  So it's another victory for laziness ¯\_(ツ)_/¯
 
 ## Usage
 
 ```js
-$$EXAMPLE
+change YOUR_URL in run.bat
+for example:
+python web_parser.py https://www.dy2018.com/i/100389.html
 ```
 
 outputs
 
 ```
-hello warld
+episodes at this time: 40
+ftp://g:g@tv.kaida365.com:2166/浪漫星星40.mp4
+...
+ftp://g:g@tv.kaida365.com:2166/浪漫星星01.mp4
 ```
 
-## API
+## Requirements
 
-```js
-var $$rePo = require('$$REPO')
-```
-
-See [api_formatting.md](api_formatting.md) for tips.
-
-## Install
-
-With [npm](https://npmjs.org/) installed, run
+lxml
 
 ```
-$ npm install $$REPO
+$ pip install lxml
 ```
 
 ## Acknowledgments
 
-$$REPO was inspired by..
+For need of matching "ftp://" or "ed2k://" urls in html tags, some websites may have coding errors and parse errors by using etree, so use: content.decode and set errors argument as 'ignore'
 
-## See Also
+## TODO
 
-- [`noffle/common-readme`](https://github.com/noffle/common-readme)
-- ...
-
-## License
-
-$$ZEE_LICENSE
+[x] expand the scope of applications
