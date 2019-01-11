@@ -1,7 +1,7 @@
 # download-url-parser
 
 > When I use third party software to download episodes on film websites, I have to click each download url and it's really bothering me. 
-  So it's another victory for laziness ¯\_(ツ)_/¯
+  So it's another victory for laziness ╮(╯▽╰)╭
 
 ## Usage
 
