@@ -30,7 +30,7 @@ $ pip install lxml
 
 ## Acknowledgments
 
-For need of matching "ftp://" or "ed2k://" urls in html tags, some websites may have coding errors and parse errors by using etree, so use: content.decode and set errors argument as 'ignore'
+For the need of matching "ftp://" or "ed2k://" urls in html tags, some websites may have coding errors and parse errors by using etree, so use: content.decode and set errors argument as 'ignore'
 
 ## TODO
 
